@@ -1,0 +1,67 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="{% static 'newapp/css/dark-bootstrap.min.css' %}" id="bootstrap-style" rel="stylesheet"
+          type="text/css"/>
+    <link href="{% static 'newapp/css/popup.css' %}" rel="stylesheet"
+          type="text/css"/>
+    <title>Тестовое задание</title>
+</head>
+<body>
+<header id="page-topbar">
+    <div style="display: inline-block">
+            <div style="position: absolute; top: 2%; left: 90%">
+                <button type="button" class="btn btn-primary mr-2" id="popup-button">Добавить</button>
+                    <div class="popup">
+                        <div class="popup__container">
+                            <div class="popup__wrapper">
+                                <div id="blablabla" class="form-control">
+                                    <form role="form" autocomplete="off" method="POST">{% csrf_token %}
+                                        <label class="text-primary">{{ form.GraphFunction.label }}</label><br>
+                                        {{ form.GraphFunction }}<br>
+                                        <label class="text-primary">{{ form.GraphInterval.label }}</label><br>
+                                        {{ form.GraphInterval }}<br>
+                                        <label class="text-primary">{{ form.GraphDt.label }}</label><br>
+                                        {{ form.GraphDt }}<br>
+                                        <button type="submit" class="btn btn-warning buut" style="margin-top: 7%;">Отправить</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+    </div>
+</header>
+<main>
+    <table class="table table-hover table-sm" style="position: absolute; top: 10%;">
+
+        <tbody id="filters">
+        <tr class="text-center">
+            <th class="w-10">Функция</th>
+            <th class="w-20" style="margin: 50% 50%">График</th>
+            <th class="w-20" style="margin: 50% 50%">Интервал t, дней</th>
+            <th class="w-20" style="margin: 50% 50%">Шаг t, часы</th>
+            <th class="w-20" style="margin: 50% 50%">Дата обработки</th>
+        </tr>
+        {% for el in result %}
+        <tr class="h-100 text-center" id="func">
+            <td>{{ el.GraphFunction }}</td>
+            {% if el.GraphImageEx == null %}
+            <td><img src="/media/func_folder/{{ el.GraphImage }}" alt="{{ el.GraphImage }}"></td>
+            {% else %}
+                <td>{{ el.GraphImageEx }}</td>
+            {% endif %}
+            <td>{{ el.GraphInterval }}</td>
+            <td>{{ el.GraphDt }}</td>
+            <td>{{ el.GraphDateTime }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <script src="{% static 'newapp/js/popup.js' %}"></script>
+</main>
+</body>
+</html>

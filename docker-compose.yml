@@ -27,19 +27,35 @@ services:
     image: app:django
     container_name: django_app
     command: python manage.py runserver 0.0.0.0:8000
+    environment:
+      - SQL_ENGINE=django.db.backends.postgresql
     depends_on:
       - db
+
+  # Rabbit
+  rabbit:
+    restart: always
+    image: "rabbitmq:3-management"
+    environment:
+      RABBITMQ_NODENAME: "rabbit@localhost"
+      RABBITMQ_DEFAULT_USER: "test"
+      RABBITMQ_DEFAULT_PASS: "test"
+    ports:
+      - "15672:15672"
 
   # Celery
   celery:
     restart: always
     build:
       context: .
-    command: celery -A core worker -l DEBUG
+    command: celery -A core worker --loglevel=info
     volumes:
       - .:/django
+    links:
+      - rabbit
     container_name: celery
     depends_on:
       - db
       - redis
       - app
+      - rabbit

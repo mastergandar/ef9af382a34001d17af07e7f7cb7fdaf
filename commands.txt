@@ -14,10 +14,14 @@ Part#4
 docker-compose run django_app sh -c "django-admin startapp ."
 docker exec -it django_app sh
 
+celery -A proj worker -l info --pool=solo
 #Run Celery Task
     python manage.py shell
     from newapp.tasks import add
     task = add.delay(2, 2)
+
+docker run -d --hostname my-rabbit --name some-rabbit -p 5672:5672 -p 8080:15672 rabbitmq:3-management
+
 Info
 PYTHONONUNBUFFERED:
 Setting the non-empty value of PYTHONONUNBUFFERED means
