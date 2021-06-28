@@ -1,21 +1,21 @@
 
 <div align="center">
 
-![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api/pin?username=mastergandar&repo=curse_git&theme=radical&show_owner=True)
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api/pin?username=mastergandar&repo=interview_test-work&theme=radical&show_owner=True)
 
 </div>
 
 <div align="center">
 
-![](https://img.shields.io/github/languages/count/mastergandar/curse_git?style=for-the-badge)
-![](https://img.shields.io/github/languages/code-size/mastergandar/curse_git?style=for-the-badge)
-![](https://img.shields.io/github/downloads/mastergndar/curse_git/total?style=for-the-badge)
-![](https://img.shields.io/github/issues/mastergandar/curse_git?style=for-the-badge)
-![](https://img.shields.io/github/license/mastergandar/curse_git?style=for-the-badge)
+![](https://img.shields.io/github/languages/count/mastergandar/interview_test-work?style=for-the-badge)
+![](https://img.shields.io/github/languages/top/mastergandar/interview_test-work?style=for-the-badge)
+![](https://img.shields.io/github/languages/code-size/mastergandar/interview_test-work?style=for-the-badge)
+![](https://img.shields.io/github/downloads/mastergndar/interview_test-work/total?style=for-the-badge)
+![](https://img.shields.io/github/issues/mastergandar/interview_test-work?style=for-the-badge)
+![](https://img.shields.io/github/license/mastergandar/interview_test-work?style=for-the-badge)
 ![](https://img.shields.io/github/followers/mastergandar?style=for-the-badge)
-![](https://img.shields.io/github/stars/mastergandar/curse_git?style=for-the-badge)
-![](https://img.shields.io/github/commit-activity/m/mastergandar/curse_git?style=for-the-badge)
-![](https://img.shields.io/github/last-commit/mastergandar/curse_git?style=for-the-badge)
+![](https://img.shields.io/github/stars/mastergandar/interview_test-work?style=for-the-badge)
+![](https://img.shields.io/github/last-commit/mastergandar/interview_test-work?style=for-the-badge)
 ![](https://img.shields.io/badge/platform-windows,linux-lightgrey?style=for-the-badge)
 
 </div>
